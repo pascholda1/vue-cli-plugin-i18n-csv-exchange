@@ -5,7 +5,7 @@ This plugin can export nested localization JSON files to CSV and import CSV loca
 ## Installation
 
 ````shell
-npm i ...TODO
+npm i --save-dev @pascholda1/vue-cli-plugin-i18n-csv-exchange 
 vue invoke vue-cli-plugin-i18n-csv-exchange
 ````
 
