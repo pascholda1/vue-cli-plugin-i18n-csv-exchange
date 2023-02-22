@@ -1,0 +1,26 @@
+{
+  "name": "@pascholda1/vue-cli-plugin-i18n-csv-exchange",
+  "version": "1.0.0",
+  "description": "Vue CLI plugin to convert i18n localizations from JSON to CSV / CSV to JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pascholda1/vue-cli-plugin-i18n-csv-exchange.git"
+  },
+  "keywords": [
+    "Vue",
+    "Vue",
+    "CLI",
+    "i18n",
+    "CSV"
+  ],
+  "author": "Simon Paschold",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pascholda1/vue-cli-plugin-i18n-csv-exchange/issues"
+  },
+  "homepage": "https://github.com/pascholda1/vue-cli-plugin-i18n-csv-exchange#readme"
+}
