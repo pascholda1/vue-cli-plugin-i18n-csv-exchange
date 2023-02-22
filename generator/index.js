@@ -17,7 +17,7 @@ module.exports = async (api, options) => {
 
     convertJSONtoCSV(jsonDir, csvDir);
 
-    copyReadMe(csvDir);
+    copyStaticFiles(csvDir);
 
   } else if (mode === 'CSVtoJSON') {
 
@@ -170,7 +170,17 @@ const writeJSONFile = function(srcFileUri, jsonDir, contents) {
 
 };
 
-const copyReadMe = function(csvDir) {
-  fs.copyFileSync('./static/README.md', csvDir);
-  fs.copyFileSync('./static/README.txt', csvDir);
+const copyStaticFiles = function(csvDir) {
+
+  const staticDir = path.dirname(__filename) + '/static';
+
+  fs.readdirSync(staticDir)
+      // map src & dest filename
+      .map(filename => ({
+        src: [staticDir, filename].join('/'),
+        dest: [csvDir, filename].join('/'),
+      }))
+      // copy files
+      .forEach(({src, dest}) => fs.copyFileSync(src, dest));
+
 };
